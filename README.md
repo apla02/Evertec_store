@@ -1,1 +1,2 @@
-# New project to manage a little store# Evertec_store
+# New project to manage a little store
+# Evertec_store
