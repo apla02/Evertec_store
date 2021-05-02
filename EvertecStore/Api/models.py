@@ -16,9 +16,11 @@ class Orders(models.Model):
     updated_at = models.DateField(auto_now=True, null=False)
 
     def __str__(self):
+        """str method to return a str representation of Orders model"""
         return f'{self.customer_name} | {self.id}'
 
     def serializer(self):
+        """Method implement to serialize object (pending search new ways)"""
         return {
             f'{key}': value for key, value in self.__dict__.items() if key != '_state'
         }
@@ -26,4 +28,5 @@ class Orders(models.Model):
 
 
     class Meta:
+        """class to set up the meta features"""
         db_table = "orders"
